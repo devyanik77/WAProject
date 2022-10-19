@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="WACart Project-SmokeTesting">
+	<listeners>
+		<listener class-name="com.listeners.MyListener"></listener>
+		<listener class-name="com.listeners.SetRetryListener"></listener>
+	</listeners>
+	<test thread-count="5" name="Smoke">
+		<parameter name="browser" value="Chrome"></parameter>
+		<groups>
+			<run>
+				<include name="Smoke"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.testCases.IndexPageTest" />
+			<class name="com.testCases.LoginPageTest" />
+			<class name="com.testCases.RegisterCustomerPageTest" />
+			<class name="com.testCases.HomePageTest" />
+			<class name="com.testCases.ProductDescPageTest" />
+			<class name="com.testCases.SearchResultPageTest" />
+			<class name="com.testCases.ShoppingCartPageTest" />
+			<class name="com.testCases.CheckoutPageTest" />
+			<class name="com.testCases.ConfirmOrderPageTest" />
+			<class name="com.testCases.CompleteOrderPageTest" />
+		</classes>
+	</test>
+</suite>

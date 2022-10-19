@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [WACart Project]">
+  <listeners>
+    <listener class-name="com.listeners.MyListener"/>
+    <listener class-name="com.listeners.SetRetryListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.testCases.HomePageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="endReport"/>
+          <include name="compareTest" invocation-numbers="0"/>
+          <include name="homePageTitleTest" invocation-numbers="0"/>
+          <include name="wishListTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="noSearchProductTest" invocation-numbers="0 1"/>
+          <include name="checkoutTest" invocation-numbers="0"/>
+          <include name="searchOptDisplayTest" invocation-numbers="0"/>
+          <include name="shoppingCartTest" invocation-numbers="0"/>
+          <include name="reportSetup"/>
+        </methods>
+      </class> <!-- com.testCases.HomePageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [WACart Project] -->

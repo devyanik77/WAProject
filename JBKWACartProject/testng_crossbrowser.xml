@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="WACart Project-CrossBrowserTesting">
+	<listeners>
+		<listener class-name="com.listeners.MyListener"></listener>
+		<listener class-name="com.listeners.SetRetryListener"></listener>
+	</listeners>
+	<test name="ChromeTest">
+		<parameter name="browser" value="Chrome"></parameter>
+		<classes>
+			<class name="com.testCases.IndexPageTest" />
+			<class name="com.testCases.LoginPageTest" />
+			<class name="com.testCases.RegisterCustomerPageTest" />
+		</classes>
+	</test>
+		
+		<test name="FirefoxTest">
+		<parameter name="browser" value="Firefox"></parameter>
+		<classes>
+			<class name="com.testCases.IndexPageTest" />
+			<class name="com.testCases.LoginPageTest" />
+			<class name="com.testCases.RegisterCustomerPageTest" />
+		</classes>
+	</test>
+	
+	<test name="IETest">
+		<parameter name="browser" value="IE"></parameter>
+		<classes>
+			<class name="com.testCases.IndexPageTest" />
+			<class name="com.testCases.LoginPageTest" />
+			<class name="com.testCases.RegisterCustomerPageTest" />
+		</classes>
+	</test>	
+		
+	
+</suite>
